@@ -20,7 +20,7 @@ def brain_calc():
         val_expr = str(eval(expr))
         stack = (expr, val_expr)
 
-        print('Question: ', expr)
+        print('Question:', expr)
         answer = prompt.string('Your answer: ')
         print(stack)
 
