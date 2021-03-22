@@ -25,7 +25,7 @@ def brain_progression():
         if elem == answer:
             print('Correct!')
         else:
-            print(f" '{answer}' is wrong answer;(. Correct answer was '{seq[rand_pos]}'.")
+            print(f"'{answer}' is wrong answer;(. Correct answer was '{seq[rand_pos]}'.")
             print(f"Let's try again, {name}!")
             break
 

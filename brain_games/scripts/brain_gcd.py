@@ -21,7 +21,7 @@ def brain_gcd():
         if answer == gcd:
             print('Correct!')
         else:
-            print(f" '{answer}' is wrong answer;(. Correct answer was '{gcd}'.")
+            print(f"'{answer}' is wrong answer;(. Correct answer was '{gcd}'.")
             print(f"Let's try again, {name}!")
             break
 

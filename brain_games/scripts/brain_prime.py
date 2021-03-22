@@ -31,7 +31,7 @@ def brain_prime():
         if answer == num_prime:
             print('Correct!')
         else:
-            print(f" '{answer}' is wrong answer;(. Correct answer was '{num_prime}'.")
+            print(f"'{answer}' is wrong answer;(. Correct answer was '{num_prime}'.")
             print(f"Let's try again, {name}!")
             break
 

@@ -27,7 +27,7 @@ def brain_calc():
         if answer == val_expr:
             print('Correct!')
         else:
-            print(f" '{answer}' is wrong answer;(. Correct answer was '{val_expr}'.")
+            print(f"'{answer}' is wrong answer;(. Correct answer was '{val_expr}'.")
             print(f"Let's try again, {name}!")
             break
 

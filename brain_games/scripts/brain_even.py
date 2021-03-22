@@ -22,7 +22,7 @@ def brain_even():
             print('Correct!')
             k += 1
         else:
-            print(f" '{answer}' is wrong answer;(. Correct answer was '{parity}'.")
+            print(f"'{answer}' is wrong answer;(. Correct answer was '{parity}'.")
             print(f"Let's try again, {name}")
             break
     else:
