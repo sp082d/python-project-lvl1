@@ -14,11 +14,9 @@ def brain_even():
     while k < 3:
         number = random.randint(5, 30)
         parity = 'no' if number % 2 else 'yes'
-        stack = (number, parity)
 
-        print('Question: ', number)
+        print('Question:', number)
         answer = prompt.string('Your answer: ')
-        print(stack)
 
         if answer == parity:
             print('Correct!')
