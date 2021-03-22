@@ -1,6 +1,10 @@
 import random
 import prompt
 
+print("Welcome to the Brain Games!")
+name = prompt.string('May I have your name? ')
+print(f'Hello, {name}!')
+
 print('Answer "yes" if the number is even, otherwise answer "no".')
 
 k = 0
@@ -18,9 +22,8 @@ while k < 3:
         print('Correct!')
         k += 1
     else:
-        # print(f"Let's try again, {name}")
-        print("Let's try again,")
+        print(f"Let's try again, {name}")
         break
 else:
-    # print(f'Congratulations, {name}!')
-    print("Congratulations,")
+    print(f'Congratulations, {name}!')
+
