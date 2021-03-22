@@ -15,7 +15,7 @@ def brain_gcd():
         s_number = random.randint(1, 10)
         gcd = str(math.gcd(f_number, s_number))
 
-        print('Question: ', f_number, s_number)
+        print('Question:', f_number, s_number)
         answer = prompt.string('Your answer: ')
 
         if answer == gcd:
