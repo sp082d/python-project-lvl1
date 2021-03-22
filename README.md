@@ -4,4 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
 ascinema demonstration:
+- brain-even
 https://asciinema.org/a/WauOZGI0c0Aw6k6G2DxBpOMB1
+- brain-calc
+https://asciinema.org/a/bKh15Kb00mgJeibN8tHPnSSCp
