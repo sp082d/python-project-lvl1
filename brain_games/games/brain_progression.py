@@ -19,6 +19,7 @@ def make_question():
     progression = make_progression()
     secret = choice(progression)
 
-    progression = ' '.join(['..' if num == secret else num for num in progression])
+    progression = ' '.join(['..' if num == secret else
+                            num for num in progression])
     question = 'Question: {progression}'.format(progression=progression)
     return question, secret

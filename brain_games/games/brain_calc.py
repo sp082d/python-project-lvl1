@@ -50,4 +50,3 @@ def make_question():
 
     answer = correct_answer(num1, operation, num2)
     return question, answer
-
