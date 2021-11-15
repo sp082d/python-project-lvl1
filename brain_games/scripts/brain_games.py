@@ -3,7 +3,7 @@
 
 """Program entry point."""
 
-
+import sys
 from brain_games.cli import get_user_answer, get_user_name
 from brain_games.games.common import check_answer
 
@@ -26,7 +26,7 @@ def game_engine(game_task, question_and_answer):
         else:
             print(message)
             print("Let's try again, {user_name}!".format(user_name=user_name))
-            break
+            sys.exit()
     print('Congratulations, {user_name}!'.format(user_name=user_name))
 
 
