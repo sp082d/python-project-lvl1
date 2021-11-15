@@ -9,7 +9,7 @@ from brain_games.games.common import generate_number
 def make_question():
     """Generate game question."""
     number = generate_number()
-    question = 'Question: {}'.format(number)
+    question = 'Question: {number}'.format(number=number)
     answer = correct_answer(number)
     return question, answer
 
