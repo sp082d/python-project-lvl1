@@ -8,10 +8,10 @@ from random import choice, randint
 
 def make_progression():
     """Generate arithmetic progression."""
-    start = randint(1, 100)
-    end = randint(1, 100)
+    start = randint(1, 10)
+    end = randint(start + 5, start + 10)
 
-    return list(range(start, end))
+    return list(map(str, range(start, end)))
 
 
 def make_question():
