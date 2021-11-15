@@ -2,6 +2,7 @@
 
 """Brain GCD game functions."""
 
+
 import math
 from brain_games.games.common import generate_number
 

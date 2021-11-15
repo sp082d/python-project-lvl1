@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
 """Brain prime game functions."""
-import math
 
+
+import math
 from brain_games.games.common import generate_number
 
 

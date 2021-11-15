@@ -2,6 +2,7 @@
 
 """Functions common to all games."""
 
+
 from random import randint
 
 

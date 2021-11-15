@@ -2,6 +2,7 @@
 
 """Brain progression game functions."""
 
+
 from random import choice, randint
 
 

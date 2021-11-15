@@ -2,6 +2,7 @@
 
 """Brain even game functions."""
 
+
 from brain_games.games.common import generate_number
 
 

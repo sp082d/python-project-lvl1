@@ -4,7 +4,6 @@
 
 
 from random import choice
-
 from brain_games.games.common import generate_number
 
 
