@@ -1,6 +1,11 @@
 *.egg-info
 __pycache__
 dist/
+*.pyc
 .idea/
 .venv/
+.coverage
+coverage.xml
+.pytest_cache/
+.vim
 .DS_Store
