@@ -7,7 +7,7 @@ from random import randint
 
 def generate_number():
     """Return random number from range."""
-    return randint(1, 100)
+    return randint(1, 10)
 
 
 def check_answer(user_answer, correct_answer):
