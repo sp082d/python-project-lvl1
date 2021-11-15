@@ -6,7 +6,7 @@ import prompt
 
 
 def get_user_name():
-    """Prompt user for his/her name."""
+    """Prompt user for your name."""
     user_name = prompt.string('May I have your name? ')
     return user_name
 
