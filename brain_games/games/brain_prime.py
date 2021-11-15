@@ -3,16 +3,17 @@
 """Brain prime game functions."""
 
 
-import math
 from brain_games.games.common import generate_number
 
 
 def is_prime(number):
     """Check if number is prime or not."""
-    if number < 2 < number:
+    if number in [2, 3]:
+        return True
+    if number % 2 == 0 or number < 2:
         return False
 
-    for i in range(3, int(math.sqrt(number)) + 1, 2):
+    for i in range(3, int(number ** 0.5) + 1, 2):
         if number % i == 0:
             return False
     else:
