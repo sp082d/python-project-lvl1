@@ -3,6 +3,7 @@
 
 """Program entry point."""
 
+
 import sys
 from brain_games.cli import get_user_answer, get_user_name
 from brain_games.games.common import check_answer

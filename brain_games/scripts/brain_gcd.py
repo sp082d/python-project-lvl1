@@ -2,6 +2,7 @@
 
 """Brain GCD game."""
 
+
 from brain_games.games.brain_gcd import make_question
 from brain_games.scripts.brain_games import game_engine
 

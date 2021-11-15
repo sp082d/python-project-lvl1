@@ -2,6 +2,7 @@
 
 """Brain calc game."""
 
+
 from brain_games.games.brain_calc import make_question
 from brain_games.scripts.brain_games import game_engine
 
