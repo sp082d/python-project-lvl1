@@ -13,4 +13,3 @@ def make_question():
     question = 'Question: {num1} {num2}'.format(num1=num1, num2=num2)
     answer = math.gcd(num1, num2)
     return question, str(answer)
-
