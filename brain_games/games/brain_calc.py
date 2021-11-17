@@ -4,7 +4,7 @@
 
 import operator
 from random import choice
-from brain_games.games.common import generate_number
+from brain_games.game_engine import generate_number
 
 
 operations = {

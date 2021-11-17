@@ -3,8 +3,7 @@
 """Brain even game."""
 
 from brain_games.games.brain_even import make_question
-from brain_games.scripts.brain_games import game_engine
-
+from brain_games.game_engine import game_engine
 
 QUESTION = 'Answer "yes" if number even otherwise answer "no".'
 

@@ -3,7 +3,7 @@
 """Brain prime game functions."""
 
 
-from brain_games.games.common import generate_number
+from brain_games.game_engine import generate_number
 
 
 def is_prime(number):
