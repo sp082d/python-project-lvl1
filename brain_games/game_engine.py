@@ -23,7 +23,8 @@ def check_answer(user_answer, correct_answer):
         message = 'Correct!'
         return True, message
 
-    message = f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'."
+    message = f"'{user_answer}' is wrong answer ;(. " \
+              f"Correct answer was '{correct_answer}'."
     return False, message
 
 
