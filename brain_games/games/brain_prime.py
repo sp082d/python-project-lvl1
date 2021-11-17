@@ -23,6 +23,6 @@ def is_prime(number):
 def make_question():
     """Generate game question."""
     number = generate_number()
-    question = 'Question: {number}'.format(number=number)
+    question = f'Question: {number}'
     answer = 'yes' if is_prime(number) else 'no'
     return question, answer

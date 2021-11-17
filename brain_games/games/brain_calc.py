@@ -30,8 +30,8 @@ def make_question():
     num2 = generate_number()
     operation = generate_operation()
 
-    question = 'Question: {first_number} {operation} {second_number}'.\
-        format(first_number=num1, operation=operation, second_number=num2)
+    question = f'Question: {num1} {operation} {num2}'
 
     answer = correct_answer(num1, operation, num2)
+
     return question, answer

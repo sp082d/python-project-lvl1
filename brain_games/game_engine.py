@@ -23,8 +23,8 @@ def check_answer(user_answer, correct_answer):
         message = 'Correct!'
         return True, message
 
-    message = "'{wrong}' is wrong answer ;(. Correct answer was '{correct}'."
-    return False, message.format(wrong=user_answer, correct=correct_answer)
+    message = f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'."
+    return False, message
 
 
 def welcome_user(game=None):
@@ -37,7 +37,7 @@ def welcome_user(game=None):
         print(game)
 
     user_name = get_user_name()
-    greeting = 'Hello, {user_name}!'.format(user_name=user_name)
+    greeting = f'Hello, {user_name}!'
 
     if game is None:
         print(greeting)
@@ -67,7 +67,7 @@ def game_engine(game, question_and_answer=None):
             correct_answers += 1
         else:
             print(message)
-            print("Let's try again, {user_name}!".format(user_name=user_name))
+            print(f"Let's try again, {user_name}!")
             sys.exit()
 
-    print('Congratulations, {user_name}!'.format(user_name=user_name))
+    print(f'Congratulations, {user_name}!')
