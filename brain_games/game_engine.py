@@ -4,7 +4,6 @@
 
 
 from random import randint
-import sys
 from brain_games.cli import get_user_answer, get_user_name
 
 
@@ -53,7 +52,7 @@ def game_engine(game, question_and_answer=None):
     user_name = welcome_user(game)
 
     if question_and_answer is None:
-        sys.exit()
+        return
 
     correct_answers = 0
 
@@ -69,6 +68,6 @@ def game_engine(game, question_and_answer=None):
         else:
             print(message)
             print(f"Let's try again, {user_name}!")
-            sys.exit()
+            return
 
     print(f'Congratulations, {user_name}!')
