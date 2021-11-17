@@ -71,5 +71,3 @@ def game_engine(game, question_and_answer=None):
             sys.exit()
 
     print('Congratulations, {user_name}!'.format(user_name=user_name))
-
-
