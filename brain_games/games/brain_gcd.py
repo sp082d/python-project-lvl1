@@ -14,8 +14,7 @@ def make_question():
     num1 = generate_number()
     num2 = generate_number()
     question = f'Question: {num1} {num2}'
-    answer = gcd(num1, num2)
-    return question, str(answer)
+    return question, str(gcd(num1, num2))
 
 
 def gcd(num1, num2):
