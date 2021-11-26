@@ -6,7 +6,7 @@
 from brain_games.game_engine import generate_number
 
 
-QUESTION = 'Find the greatest common divisor of given numbers.'
+DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
 def make_question():

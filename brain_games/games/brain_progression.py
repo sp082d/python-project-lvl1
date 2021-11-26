@@ -6,7 +6,7 @@
 from random import choice, randint
 
 
-QUESTION = 'What number is missing in the progression?'
+DESCRIPTION = 'What number is missing in the progression?'
 
 
 def make_progression():

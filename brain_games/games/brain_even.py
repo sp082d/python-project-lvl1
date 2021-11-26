@@ -6,7 +6,7 @@
 from brain_games.game_engine import generate_number
 
 
-QUESTION = 'Answer "yes" if number even otherwise answer "no".'
+DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 
 
 def make_question():

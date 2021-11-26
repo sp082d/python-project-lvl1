@@ -41,7 +41,7 @@ def run(game=None):
     print('Welcome to the Brain Games!')
 
     if game:
-        print(game.QUESTION)
+        print(game.DESCRIPTION)
 
     print()
     user_name = welcome_user()
