@@ -5,14 +5,15 @@
 
 from random import choice, randint
 
+START_UPPER = 10
 
 DESCRIPTION = 'What number is missing in the progression?'
 
 
 def make_progression():
     """Generate arithmetic progression."""
-    start = randint(1, 10)
-    end = randint(start + 5, start + 10)
+    start = randint(1, START_UPPER)
+    end = randint(start + START_UPPER // 2, start + START_UPPER)
 
     return list(map(str, range(start, end)))
 
