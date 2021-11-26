@@ -40,15 +40,13 @@ def run(game=None):
 
     print('Welcome to the Brain Games!')
 
-    if game:
-        print(game.DESCRIPTION)
-
-    print()
-    user_name = welcome_user()
-
-    if game:
+    if not game:
         print()
-        game_engine(user_name, game.make_question)
+        welcome_user()
+    else:
+        print(game.DESCRIPTION)
+        print()
+        game_engine(welcome_user(), game.make_question)
 
 
 def game_engine(user_name, game):
