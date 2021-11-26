@@ -19,13 +19,11 @@ def generate_number() -> int:
 def check_answer(user_answer: str, correct_answer: str) -> Tuple[bool, str]:
     """Check users answer."""
 
-    if user_answer == correct_answer:
-        message = 'Correct!'
-        return True, message
-
-    message = f"'{user_answer}' is wrong answer ;(. " \
-              f"Correct answer was '{correct_answer}'."
-    return False, message
+    if user_answer != correct_answer:
+        return False, f"'{user_answer}' is wrong answer ;(." \
+                      f" "f"Correct answer was '{correct_answer}'."
+    else:
+        return True, 'Correct!'
 
 
 def welcome_user() -> str:
@@ -40,13 +38,13 @@ def run(game=None) -> None:
     """Start game."""
     print('Welcome to the Brain Games!')
 
-    if not game:
-        print()
-        welcome_user()
-    else:
+    if game:
         print(game.DESCRIPTION)
         print()
         game_engine(welcome_user(), game.make_question)
+    else:
+        print()
+        welcome_user()
 
 
 def game_engine(user_name: str, game: Union[None, Callable[[], Tuple[str, str]]]) -> None:
@@ -61,10 +59,10 @@ def game_engine(user_name: str, game: Union[None, Callable[[], Tuple[str, str]]]
         res, message = check_answer(get_user_answer(), correct_answer)
         print(message)
 
-        if not res:
+        if res:
+            correct_answers += 1
+        else:
             print(f"Let's try again, {user_name}!")
             return
-        else:
-            correct_answers += 1
     else:
         print(f'Congratulations, {user_name}!')
