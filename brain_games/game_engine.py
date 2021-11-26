@@ -27,47 +27,46 @@ def check_answer(user_answer, correct_answer):
     return False, message
 
 
-def welcome_user(game=None):
-    """Welcome user and print game"""
-    print('Welcome to the Brain Games!')
-
-    if game is None:
-        print('')
-    else:
-        print(game)
-
+def welcome_user():
+    """Ask user name and print greeting."""
     user_name = get_user_name()
     greeting = f'Hello, {user_name}!'
-
-    if game is None:
-        print(greeting)
-    else:
-        print(greeting)
-
+    print(greeting)
     return user_name
 
 
-def game_engine(game, question_and_answer=None):
-    """Game engine."""
-    user_name = welcome_user(game)
+def run(game=None):
+    """Start game."""
 
-    if question_and_answer is None:
-        return
+    print('Welcome to the Brain Games!')
+
+    if game:
+        print(game.QUESTION)
+
+    print()
+    user_name = welcome_user()
+
+    if game:
+        print()
+        game_engine(user_name, game.make_question)
+
+
+def game_engine(user_name, game):
+    """Game engine."""
 
     correct_answers = 0
 
     while correct_answers < NUMBER_OF_ROUNDS:
-        question, correct_answer = question_and_answer()
+        question, correct_answer = game()
+
         print(question)
-
         res, message = check_answer(get_user_answer(), correct_answer)
+        print(message)
 
-        if res:
-            print(message)
-            correct_answers += 1
-        else:
-            print(message)
+        if not res:
             print(f"Let's try again, {user_name}!")
             return
-
-    print(f'Congratulations, {user_name}!')
+        else:
+            correct_answers += 1
+    else:
+        print(f'Congratulations, {user_name}!')

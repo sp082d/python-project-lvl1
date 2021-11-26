@@ -7,6 +7,9 @@ from random import choice
 from brain_games.game_engine import generate_number
 
 
+QUESTION = 'What is the result of the expression?'
+
+
 operations = {
     '+': operator.add,
     '-': operator.sub,

@@ -3,16 +3,13 @@
 """Brain calc game."""
 
 
-from brain_games.games.brain_calc import make_question
-from brain_games.game_engine import game_engine
-
-
-QUESTION = 'What is the result of the expression?'
+from brain_games.game_engine import run
+from brain_games.games import brain_calc
 
 
 def main():
     """Run calc game."""
-    game_engine(QUESTION, make_question)
+    run(brain_calc)
 
 
 if __name__ == '__main__':

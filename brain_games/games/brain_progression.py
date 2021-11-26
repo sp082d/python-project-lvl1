@@ -6,6 +6,9 @@
 from random import choice, randint
 
 
+QUESTION = 'What number is missing in the progression?'
+
+
 def make_progression():
     """Generate arithmetic progression."""
     start = randint(1, 10)

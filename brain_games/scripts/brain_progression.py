@@ -3,16 +3,13 @@
 """Brain progression game."""
 
 
-from brain_games.games.brain_progression import make_question
-from brain_games.game_engine import game_engine
-
-
-QUESTION = 'What number is missing in the progression?'
+from brain_games.game_engine import run
+from brain_games.games import brain_progression
 
 
 def main():
     """Run progression game."""
-    game_engine(QUESTION, make_question)
+    run(brain_progression)
 
 
 if __name__ == '__main__':
