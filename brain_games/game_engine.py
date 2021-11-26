@@ -4,7 +4,7 @@
 
 
 from random import randint
-from typing import Tuple, Union, Callable
+from typing import Tuple, Callable
 from brain_games.cli import get_user_answer, get_user_name
 
 
@@ -49,7 +49,7 @@ def run(game=None) -> None:
 
 
 def game_engine(user_name: str,
-                game: Union[None, Callable[[], Tuple[str, str]]]) -> None:
+                game: Callable[[], Tuple[str, str]]) -> None:
     """Game engine."""
 
     correct_answers = 0
