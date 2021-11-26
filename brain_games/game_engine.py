@@ -47,7 +47,9 @@ def run(game=None) -> None:
         welcome_user()
 
 
-def game_engine(user_name: str, game: Union[None, Callable[[], Tuple[str, str]]]) -> None:
+def game_engine(user_name: str,
+                game: Union[None, Callable[[], Tuple[str, str]]]) -> None:
+
     """Game engine."""
 
     correct_answers = 0
