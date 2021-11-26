@@ -13,7 +13,7 @@ def is_prime(number: int) -> bool:
     """Check if number is prime or not."""
     if number in [2, 3]:
         return True
-    if number % 2 == 0 or number == 1:
+    elif number % 2 == 0 or number == 1:
         return False
     else:
         for divisor in range(3, int(number ** 0.5) + 1, 2):
@@ -26,4 +26,6 @@ def is_prime(number: int) -> bool:
 def make_question() -> Tuple[str, str]:
     """Generate game question."""
     number = generate_number()
-    return f'Question: {number}', 'yes' if is_prime(number) else 'no'
+
+    return f'Question: {number}', \
+           'yes' if is_prime(number) else 'no'

@@ -27,4 +27,5 @@ def make_question() -> Tuple[str, str]:
     progression = ' '.join(['..' if num == secret else
                             num for num in progression])
 
-    return f'Question: {progression}', secret
+    return f'Question: {progression}', \
+           secret

@@ -31,6 +31,7 @@ def welcome_user() -> str:
     user_name = get_user_name()
     greeting = f'Hello, {user_name}!'
     print(greeting)
+
     return user_name
 
 
@@ -49,7 +50,6 @@ def run(game=None) -> None:
 
 def game_engine(user_name: str,
                 game: Union[None, Callable[[], Tuple[str, str]]]) -> None:
-
     """Game engine."""
 
     correct_answers = 0

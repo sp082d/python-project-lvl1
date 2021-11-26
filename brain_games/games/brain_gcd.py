@@ -13,8 +13,8 @@ def make_question() -> Tuple[str, str]:
     """Generate game question."""
     num1 = generate_number()
     num2 = generate_number()
-    question = f'Question: {num1} {num2}'
-    return question, str(gcd(num1, num2))
+
+    return f'Question: {num1} {num2}', str(gcd(num1, num2))
 
 
 def gcd(num1: int, num2: int) -> int:
