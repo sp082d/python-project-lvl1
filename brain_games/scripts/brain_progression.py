@@ -7,7 +7,7 @@ from brain_games.game_engine import run
 from brain_games.games import brain_progression
 
 
-def main():
+def main() -> None:
     """Run progression game."""
     run(brain_progression)
 

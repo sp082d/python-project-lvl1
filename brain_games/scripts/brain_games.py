@@ -8,7 +8,7 @@
 from brain_games.game_engine import run
 
 
-def main():
+def main() -> None:
     """Welcome user without running a game."""
     run()
 

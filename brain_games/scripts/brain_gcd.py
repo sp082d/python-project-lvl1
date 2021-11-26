@@ -7,7 +7,7 @@ from brain_games.game_engine import run
 from brain_games.games import brain_gcd
 
 
-def main():
+def main() -> None:
     """Run even game."""
     run(brain_gcd)
 

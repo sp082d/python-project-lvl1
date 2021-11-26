@@ -4,18 +4,19 @@
 
 
 from random import randint
+from typing import Tuple, Union, Callable
 from brain_games.cli import get_user_answer, get_user_name
 
 
 NUMBER_OF_ROUNDS = 3
 
 
-def generate_number():
+def generate_number() -> int:
     """Return random number from range."""
     return randint(1, 10)
 
 
-def check_answer(user_answer, correct_answer):
+def check_answer(user_answer: str, correct_answer: str) -> Tuple[bool, str]:
     """Check users answer."""
 
     if user_answer == correct_answer:
@@ -27,7 +28,7 @@ def check_answer(user_answer, correct_answer):
     return False, message
 
 
-def welcome_user():
+def welcome_user() -> str:
     """Ask user name and print greeting."""
     user_name = get_user_name()
     greeting = f'Hello, {user_name}!'
@@ -35,9 +36,8 @@ def welcome_user():
     return user_name
 
 
-def run(game=None):
+def run(game=None) -> None:
     """Start game."""
-
     print('Welcome to the Brain Games!')
 
     if not game:
@@ -49,7 +49,7 @@ def run(game=None):
         game_engine(welcome_user(), game.make_question)
 
 
-def game_engine(user_name, game):
+def game_engine(user_name: str, game: Union[None, Callable[[], Tuple[str, str]]]) -> None:
     """Game engine."""
 
     correct_answers = 0

@@ -2,14 +2,14 @@
 
 """Brain prime game functions."""
 
-
+from typing import Tuple
 from brain_games.game_engine import generate_number
 
 
 DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def is_prime(number):
+def is_prime(number: int) -> bool:
     """Check if number is prime or not."""
     if number in [2, 3]:
         return True
@@ -23,7 +23,7 @@ def is_prime(number):
         return True
 
 
-def make_question():
+def make_question() -> Tuple[str, str]:
     """Generate game question."""
     number = generate_number()
     question = f'Question: {number}'
