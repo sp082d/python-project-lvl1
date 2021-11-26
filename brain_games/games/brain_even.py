@@ -12,9 +12,9 @@ DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 def make_question() -> Tuple[str, str]:
     """Generate game question."""
     number = generate_number()
-    question = f'Question: {number}'
-    answer = correct_answer(number)
-    return question, answer
+
+    return f'Question: {number}', \
+           correct_answer(number)
 
 
 def correct_answer(number: int) -> str:
