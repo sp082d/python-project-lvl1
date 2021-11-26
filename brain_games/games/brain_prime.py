@@ -16,8 +16,8 @@ def is_prime(number):
     if number % 2 == 0 or number < 2:
         return False
 
-    for i in range(3, int(number ** 0.5) + 1, 2):
-        if number % i == 0:
+    for divisor in range(3, int(number ** 0.5) + 1, 2):
+        if number % divisor == 0:
             return False
     else:
         return True
