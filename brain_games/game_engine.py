@@ -4,7 +4,7 @@
 
 
 from random import randint
-from typing import Tuple, Callable
+from typing import Tuple, Callable, Optional
 from brain_games.cli import get_user_answer, get_user_name
 
 
@@ -35,7 +35,7 @@ def welcome_user() -> str:
     return user_name
 
 
-def run(game=None) -> None:
+def run(game=Optional[Callable[[], Tuple[str, str]]]) -> None:
     """Start game."""
     print('Welcome to the Brain Games!')
 
