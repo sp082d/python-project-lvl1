@@ -9,8 +9,6 @@ from brain_games.game_engine import generate_number
 
 
 DESCRIPTION = 'What number is missing in the progression?'
-
-
 DELTA = 10
 
 
