@@ -7,6 +7,14 @@ from brain_games.game_engine import generate_number
 
 
 DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+UP_TO_2_DIGITS = 99
+
+
+def make_question() -> Tuple[str, str]:
+    """Generate game question."""
+    number = generate_number(end=UP_TO_2_DIGITS)
+    return f'Question: {number}', \
+           'yes' if is_prime(number) else 'no'
 
 
 def is_prime(number: int) -> bool:
@@ -21,11 +29,3 @@ def is_prime(number: int) -> bool:
                 return False
         else:
             return True
-
-
-def make_question() -> Tuple[str, str]:
-    """Generate game question."""
-    number = generate_number()
-
-    return f'Question: {number}', \
-           'yes' if is_prime(number) else 'no'

@@ -7,7 +7,9 @@ from typing import Tuple
 from random import choice
 from brain_games.game_engine import generate_number
 
+
 DESCRIPTION = 'What is the result of the expression?'
+
 
 operations = {
     '+': operator.add,
@@ -31,6 +33,5 @@ def make_question() -> Tuple[str, str]:
     num1 = generate_number()
     num2 = generate_number()
     operation = choice_operation()
-
     return f'Question: {num1} {operation} {num2}', \
            correct_answer(num1, operation, num2)

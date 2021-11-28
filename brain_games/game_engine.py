@@ -11,14 +11,13 @@ from brain_games.cli import get_user_answer, get_user_name
 NUMBER_OF_ROUNDS = 3
 
 
-def generate_number() -> int:
+def generate_number(start=1, end=10) -> int:
     """Return random number from range."""
-    return randint(1, 10)
+    return randint(start, end)
 
 
 def check_answer(user_answer: str, correct_answer: str) -> Tuple[bool, str]:
     """Check users answer."""
-
     if user_answer != correct_answer:
         return False, f"'{user_answer}' is wrong answer ;(." \
                       f" "f"Correct answer was '{correct_answer}'."
@@ -31,14 +30,12 @@ def welcome_user() -> str:
     user_name = get_user_name()
     greeting = f'Hello, {user_name}!'
     print(greeting)
-
     return user_name
 
 
 def run(game=None) -> None:
     """Start game."""
     print('Welcome to the Brain Games!')
-
     if game:
         print(game.DESCRIPTION)
         print()
@@ -51,16 +48,12 @@ def run(game=None) -> None:
 def game_engine(user_name: str,
                 game: Callable[[], Tuple[str, str]]) -> None:
     """Game engine."""
-
     correct_answers = 0
-
     while correct_answers < NUMBER_OF_ROUNDS:
         question, correct_answer = game()
-
         print(question)
         res, message = check_answer(get_user_answer(), correct_answer)
         print(message)
-
         if res:
             correct_answers += 1
         else:
