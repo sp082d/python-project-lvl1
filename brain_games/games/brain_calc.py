@@ -16,7 +16,7 @@ operations = {
 }
 
 
-def generate_operation() -> str:
+def choice_operation() -> str:
     """Generate random operation."""
     return choice(list(operations.keys()))
 
@@ -30,7 +30,7 @@ def make_question() -> Tuple[str, str]:
     """Generate game question."""
     num1 = generate_number()
     num2 = generate_number()
-    operation = generate_operation()
+    operation = choice_operation()
 
     return f'Question: {num1} {operation} {num2}', \
            correct_answer(num1, operation, num2)
